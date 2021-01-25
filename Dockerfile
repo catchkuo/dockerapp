@@ -4,3 +4,9 @@ RUN useradd -ms /bin/bash admin
 USER admin
 WORKDIR /app
 CMD ["python", "app.py"] 
+
+
+
+FROM registry.access.redhat.com/ubi8/ubi
+USER root:root
+ENTRYPOINT ["tail", "-f", "/dev/null"]
